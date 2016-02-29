@@ -9,6 +9,9 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
+    /**
+     * initiate auth authentication
+     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -21,16 +24,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //$role = Auth::user()->roles()->first();
-        //return $role->name;
-        //return Auth::user()->hasRole('admin');
-        /*$user = Auth::user();
-        //return $user;
-        // Jadikan user ini sebagai admin
-        if (Auth::user()->hasRole('admin'))
-        {
-            return "Hai Admin";
-        }*/
         return view('admin');
     }
 }

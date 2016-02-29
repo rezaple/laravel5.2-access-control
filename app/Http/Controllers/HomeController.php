@@ -28,16 +28,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //$role = Auth::user()->roles()->first();
-        //return $role->name;
-        //return Auth::user()->hasRole('admin');
-        /*$user = Auth::user();
-        //return $user;
-        // Jadikan user ini sebagai admin
-        if (Auth::user()->hasRole('admin'))
-        {
-            return "Hai Admin";
-        }*/
         return view('home');
     }
 
