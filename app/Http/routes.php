@@ -23,10 +23,22 @@ Route::group(['middleware' => 'web'], function () {
     	return view('welcome');
 	});
 
+    /**
+     * Akses Kontrol tanpa group
+     */
 	Route::get('/admin', [
 	    'uses'       => 'AdminController@index',
 	    'middleware' => 'role:admin',
 	]);
+
+	/**
+	 * Contoh penggunaan akses control dengan group
+	 */
+	Route::group(['middleware' => ['role:Moderator,Admin,User']], function () {
+
+		//route disini
+		
+	});
 
 });
 
